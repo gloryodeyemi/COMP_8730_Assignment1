@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[7]:
-
-
-def med_function(word1, word2, show_matrix): 
+def med_function(word1, word2, show_matrix):
 
     rows = len(word1)+1 
     cols = len(word2)+1
@@ -31,12 +25,8 @@ def med_function(word1, word2, show_matrix):
     
     if show_matrix:
         print("The MED matrix between " + word1 + " and " + word2 + " is: ")
-
         for r in range(rows):
             print(distance[r])
-    
-#     print()
-#     print("The MED between " + word1 + " and " + word2 + " is: ", )
     
     return distance[row][col]
 
