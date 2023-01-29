@@ -2,13 +2,15 @@
 # 
 # ### Glory Odeyemi
 # 
-# #### 27-Jan-2023
+# #### 28-Jan-2023
 
 import nltk
 import multiprocessing as mp
 import time
 import itertools
 from utils.k_success import top_k_words, success_at_k, average_k
+import matplotlib.pyplot as plt
+%matplotlib inline
 
 nltk.download('wordnet')
 nltk.download('omw-1.4')
@@ -64,5 +66,23 @@ success = success_at_k(top_k_result[0])
 print(dict(itertools.islice(reversed(success.items()), 5)))
 
 # Getting the average success at k
-print(average_k(success))
+avg_success = average_k(success)
+print(avg_success)
+
+# bar chart showing the avegare success at k
+x = avg_success.keys()
+y = avg_success.values()
+
+colors = ['green','blue','purple']
+plt.bar(x, y, color=colors)
+plt.title('Average success at k', fontsize=14)
+plt.xlabel('Top-k', fontsize=14)
+plt.ylabel('Average', fontsize=14)
+plt.grid(False)
+
+for i in range(len(x)):
+    plt.text(i,list(y)[i],list(y)[i], ha='center')
+
+plt.savefig('average.png',dpi=400)
+plt.show()
 

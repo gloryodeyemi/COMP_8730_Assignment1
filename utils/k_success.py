@@ -5,7 +5,6 @@ from operator import itemgetter
 from nltk.corpus import wordnet as wn
 from utils.min_edit_distance import med_function
 
-
 # function to return top-k most similar, least distant list of tokens
 def top_k_words(data_row):
     words_in_wn = wn.words(lang='eng')
@@ -56,7 +55,9 @@ def success_at_k(top_k_result):
 
 # function calculate average success at k for k={1, 5, 10} using PyTrec_Eval_Terrier
 def average_k(success_dict):
+    average_dict = {}
     for k_success in success_dict[list(success_dict.keys())[0]].keys():
-        print(k_success, 'average:', pt.compute_aggregated_measure(
-              k_success, [val[k_success] for val in success_dict.values()]))
+        average_dict[k_success] = pt.compute_aggregated_measure(
+                                  k_success, [val[k_success] for val in success_dict.values()])
+    return average_dict
 
