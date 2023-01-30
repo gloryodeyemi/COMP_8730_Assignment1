@@ -1,1 +1,4 @@
-
+nltk
+matplotlib
+pytrec-eval-terrier
+multiprocessing
