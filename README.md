@@ -24,7 +24,7 @@ pip install -r requirements.txt
 * **[Assignment_#1.ipynb](https://github.com/gloryodeyemi/COMP_8730_Assignment1/blob/main/Assignment_%231.ipynb)** and **[Assignment_#1.py](https://github.com/gloryodeyemi/COMP_8730_Assignment1/blob/main/Assignment_%231.py)** are python notebook and script that uses the functions in the utils folder to generate the results.
 
 ## Contact
-Glory Odeyemi is currently undergoing her Masters program in Computer Science, Artificial Intelligence specialization at the [University of Windsor](https://www.uwindsor.ca/), Windsor, ON, Canada. You can connect with her on [LinkedIn](https://www.linkedin.com/in/glory-odeyemi-a3a680169/).
+Glory Odeyemi is currently undergoing her Master's program in Computer Science, Artificial Intelligence specialization at the [University of Windsor](https://www.uwindsor.ca/), Windsor, ON, Canada. You can connect with her on [LinkedIn](https://www.linkedin.com/in/glory-odeyemi-a3a680169/).
 
 ## References
 1. [WordNet](https://en.wikipedia.org/wiki/WordNet)
